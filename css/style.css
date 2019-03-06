@@ -210,8 +210,8 @@ img {
 
 .my-dots li button:before {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 100%;
+  left: -2%;
   width: 8px;
   height: 15px;
   content: ' ';
