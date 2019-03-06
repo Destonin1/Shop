@@ -31,6 +31,7 @@ body {
 	margin: 0;
 	padding: 0;
 	outline: none;
+	box-sizing: border-box;
 }
 
 img {
@@ -979,6 +980,10 @@ input[type=checkbox]:checked + label {
 
 	.product_image {
 		padding: 2rem 1rem;
+	}
+
+	.product_image img {
+		width: 80%;
 	}
 
 	.bestsales_product {
