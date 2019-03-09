@@ -796,7 +796,8 @@ footer {
 }
 
 #products h4 {
-	margin: 0 4rem 2rem 4rem;
+	margin: 0 4rem;
+	padding: 2rem 0;
 	font-size: 1.8rem;
 	color: #ff5912;
 	font-weight: 700;
@@ -805,12 +806,11 @@ footer {
 }
 
 .categories {
-	padding-top: 4rem;
 	margin-bottom: 3rem;
 	background: #fff;
 }
 
-.categories li {
+.categories_elem li {
 	font-family: HarmoniaBd, sans-serif;
 	padding: 2rem 4rem;
 	list-style: none;
@@ -823,13 +823,18 @@ footer {
 	cursor: pointer;
 }
 
-.categories li:hover {
+.categories_elem li:hover {
 	background: #ff5912;
 	color: #fff;
 }
 
+li.categories_elem_active {
+	color: #fff;
+	background: #ff5912;
+}
+
 .price_filter {
-	padding: 4rem 0;
+	padding-bottom: 3.5rem;
 	background: #fff;
 	margin-bottom: 3rem;
 }
@@ -839,7 +844,8 @@ footer {
     outline: none;
 }
 .polzunok-container {
-    padding: 1rem 3rem;
+	margin-top: 2rem;
+    padding-bottom: 4rem;
     color: #34404b;
 }
 
@@ -850,6 +856,8 @@ footer {
 }
 
 .polzunok-container .ui-slider {
+	width: 80%;
+	margin: 0 auto;
     position: relative;
     height: 3px;
     box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2), 1px 1px 5px rgba(255, 255, 255, 1);
@@ -888,7 +896,7 @@ footer {
 }
 
 .sizes {
-	padding: 4rem 0;
+	padding-bottom: 4rem;
 	background: #fff;
 	margin-bottom: 3rem;
 	font-family: HarmoniaBd, sans-serif;
@@ -980,6 +988,7 @@ input[type=checkbox]:checked + label {
 
 	.polz_text {
 		display: block;
+		margin-top: 1.5rem;
 	}
 
 	.polzunok-input-left, .polzunok-input-right {
@@ -1151,6 +1160,11 @@ input[type=checkbox]:checked + label {
 	.product_info_image img {
 		margin: 0 auto;
 	}
+
+	.categories_elem li:hover {
+	background: #ff5912;
+	color: #fff;
+	}
 }
 
 @media screen and (max-width: 590px) {
@@ -1244,6 +1258,14 @@ input[type=checkbox]:checked + label {
 
 	.footer_menu_item {
 		width: 20%;
+	}
+
+	.categories h4 {
+		cursor: pointer;
+	}
+
+	.categories_elem li {
+		
 	}
 }
 

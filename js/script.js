@@ -29,7 +29,7 @@ $(document).ready(function(){
 		$('.menu_fixed').toggleClass('menu_fixed_active');
 	});
 
-
+	/* COUNTER */
 	var num = 0;
 
 	$("#plus").click(function() {
@@ -44,6 +44,11 @@ $(document).ready(function(){
 		} else {
 			$("#counter").html(num);
 		}    	
+  	});
+
+  	/* Click on li */
+  	$('.categories_elem li').click(function(){
+  		$(this).toggleClass('categories_elem_active');
   	});
 
 });
