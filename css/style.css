@@ -752,7 +752,6 @@ footer {
 
 #counter {
 	color: #ff5912;
-	width: 200%;
 	position: absolute;
 	top: 0;
 	left: 18rem;
@@ -773,6 +772,10 @@ footer {
 	font-size: 1.8rem;
 	font-weight: 700;
 	margin-top: 4rem;
+}
+
+.price_order1 {
+	display: none
 }
 
 .product_icons button {
@@ -1162,8 +1165,34 @@ input[type=checkbox]:checked + label {
 	}
 
 	.categories_elem li:hover {
-	background: #ff5912;
-	color: #fff;
+		background: #ff5912;
+		color: #fff;
+	}
+
+	#product_info {
+		padding-top: 4rem;
+	}
+
+	.product_images {
+		order: 2;
+	}
+
+	.product_detail_info {
+		order: 1;
+	}
+
+	.price_order {
+		display: none;
+	}
+
+	.price_order1 {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 1.8rem;
+		font-weight: 700;
+		margin-top: 4rem;
+		order: 3;
 	}
 }
 
@@ -1280,5 +1309,19 @@ input[type=checkbox]:checked + label {
 
 	.letter_title h3 {
 		margin-bottom: 2rem;
+	}
+
+	.choose_options  {
+		flex-direction: column;	
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+	.choose_numder {
+		margin-top: 2rem;
+	}
+
+	.product_detail_info {
+		text-align: center;
 	}
 }
