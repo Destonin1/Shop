@@ -1,20 +1,4 @@
 $(document).ready(function(){
-	var num = 0;
-
-	$("#plus").click(function() {
-    	num++;
-    $("#counter").html(num);
-  });
-
-	$("#minus").click(function() {
-		if( num > 0 ){
-			num--;
-    		$("#counter").html(num);
-		} else {
-			$("#counter").html(num);
-		}    	
-  });
-
 	$(".polzunok").slider({
     min: 0,
     max: 10000,

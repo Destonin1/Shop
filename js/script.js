@@ -24,4 +24,26 @@ $(document).ready(function(){
 		swipe: false,
 		focusOnSelect: true
 	});
+
+	$('.fa-bars').click(function(){
+		$('.menu_fixed').toggleClass('menu_fixed_active');
+	});
+
+
+	var num = 0;
+
+	$("#plus").click(function() {
+    	num++;
+    $("#counter").html(num);
+  	});
+
+	$("#minus").click(function() {
+		if( num > 0 ){
+			num--;
+    		$("#counter").html(num);
+		} else {
+			$("#counter").html(num);
+		}    	
+  	});
+
 });
