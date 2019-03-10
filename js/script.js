@@ -51,4 +51,10 @@ $(document).ready(function(){
   		$(this).toggleClass('categories_elem_active');
   	});
 
+  	/*Click on size */
+  	$('.size_btn').click(function(){
+  		$('.size_btn').removeClass('size_btn_active');
+  		$(this).toggleClass('size_btn_active');
+  	});
+
 });

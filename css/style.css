@@ -237,7 +237,7 @@ img {
 #products {
 	background: #f4f6f8;
 	text-align: center;
-	padding-top: 12rem;
+	padding-top: 8rem;
 }
 
 .products_sale {
@@ -276,7 +276,7 @@ img {
 	text-decoration: none;
 }
 
-.product_image:hover .product_image_hover{
+.product_image:hover .product_image_hover {
 	display: block;
 }
 
@@ -732,6 +732,11 @@ footer {
 	margin-right: 15%;
 }
 
+.choose_size {
+	position: relative;
+	margin-right: 30%;
+}
+
 #plus {
 	position: absolute;
 	top: 0;
@@ -757,19 +762,50 @@ footer {
 	left: 18rem;
 }
 
+.size_btn_line {
+	position: absolute;
+	text-transform: lowercase;
+}
+
 .size_btn {
 	cursor: pointer;
 }
 
+.size_btn_line:first-child {
+	top: 5%;
+	right: -3rem;
+}
+
+.size_btn_line:nth-child(2) {
+	top: 5%;
+	right: -7.5rem;
+}
+
+.size_btn_line:nth-child(3) {
+	top: 5%;
+	right: -10rem;
+}
+
+.size_btn_line:last-child {
+	top: 5%;
+	right: -12rem;
+}
+
 .size_btn:hover {
 	color: #ff5912;
+	text-transform: uppercase;
+}
+
+.size_btn_active {
+	color: #ff5912;
+	text-transform: uppercase;
 }
 
 .price_order {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	font-size: 1.8rem;
+	font-size: 2.5rem;
 	font-weight: 700;
 	margin-top: 4rem;
 }
@@ -1189,7 +1225,7 @@ input[type=checkbox]:checked + label {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		font-size: 1.8rem;
+		font-size: 3rem;
 		font-weight: 700;
 		margin-top: 4rem;
 		order: 3;
