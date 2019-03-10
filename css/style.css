@@ -195,7 +195,7 @@ img {
 	left: -5%;
 	bottom: 48%;
 	display: block;
-	width: 100%;
+	width: 0;
 	list-style: none;
 }
 
@@ -1280,13 +1280,13 @@ input[type=checkbox]:checked + label {
 	}
 
 	.my-dots {
-		left: -25%;
+		left: 10px;
 		bottom: 40%;
 	}
 
 	.my-dots li button:before {
 	  top: 100%;
-	  left: 20%;
+	  left: -20px;
 	}
 
 	.product_image {
