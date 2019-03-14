@@ -73,4 +73,45 @@ $(document).ready(function(){
 		});
 	});
 
+	/*MODAL*/
+
+	var basket_num = 0;
+	var	empty = '<div class="col-12 empty_text"><p>It is empty</p></div>';
+
+	$('.basket_btn').click(function(){
+		if(basket_num <= 0)
+			$('#modal_content').html(empty);
+		});
+
+	$('.add_to_cart').click(function(){
+		if(basket_num <= 0)
+			$('#modal_content').html(' ');
+		var htmlString = document.getElementById('modal_content');
+		var product1 = document.createElement('div');
+		product1.className = "col-12 col-lg-6";
+		product1.innerHTML = '<div class="basket_product"><div class="basket_img"><img src="img/product.png"></div><div class="basket_text"><p class="basket_name">Reebok Track Jacket</p> <span class="basket_price">100$</span></div><div class="modal_product_close">&times;</div></div>';
+		basket_num++;
+		$('.basket_number').html(basket_num);
+		htmlString.appendChild(product1);
+	});
+
+	var $accountDelete = $('.modal_clear'),
+    $accountDeleteDialog = $('#confirm-delete');
+
+  	$accountDelete.on('click', function() {
+    	$accountDeleteDialog[0].showModal();
+  	});
+
+  	$('#delete_btn').on('click', function() {
+  		$('#modal_content').html(empty);
+		basket_num = 0;
+		$('.basket_number').html(basket_num);
+    	$accountDeleteDialog[0].close();
+  	});
+
+  	$('#cancel_btn').on('click', function() {
+    	$accountDeleteDialog[0].close();
+  	});
+
 });
+

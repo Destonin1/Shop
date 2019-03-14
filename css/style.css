@@ -34,6 +34,10 @@ body {
 	box-sizing: border-box;
 }
 
+p {
+	margin-bottom: 0;
+}
+
 img {
 	max-width: 100%;
 }
@@ -112,26 +116,44 @@ img {
 	line-height: 3.4rem;
 }
 
-.navigation a {
+.navigation button {
 	position: absolute;
 	color: #34404b;
+	border: none;
+	background: none;
+	cursor: pointer;
+	outline: none;
 }
 
-.navigation a:hover {
+.navigation button:hover {
 	-webkit-transform: scale(1.2,1.2);
 	transition: 0.5s;
 }
 
-.navigation a:first-child {
+.navigation button:first-child {
 	right: 11rem;
 }
 
-.navigation a:nth-child(2) {
+.navigation button:nth-child(2) {
 	right: 6rem;
 }
 
-.navigation a:last-child {
+.navigation button:last-child {
 	right: 0.5rem;
+}
+
+.basket_number {
+	position: absolute;
+	bottom: 70%;
+	right: 50%;
+	transform: translateX(50%);
+	font-size: 1.4rem;
+	background: #34404b;
+	color: #fff;
+	padding: 5px;
+	line-height: 1rem;
+	border-radius: 80%;
+	z-index: 2;
 }
 
 /* BIG SLIDER*/
@@ -308,6 +330,11 @@ img {
 	z-index: 2;
 }
 
+.product_image_hover img {
+	width: 80px;
+	height: 100px;
+}
+
 .product_image_hover a {
 	text-decoration: none;
 }
@@ -373,6 +400,7 @@ span.green {
 
 .product_icons i {
 	margin: 0 1.5rem;
+	-webkit-user-select: none;
 }
 
 .product_icons i:hover {
@@ -431,6 +459,7 @@ span.green {
 	font-size: 3.2rem;
 	color: #ff5912;
 	font-family: HarmoniaB, sans-serif;
+	cursor: pointer;
 }
 
 .sale_price i {
@@ -527,15 +556,16 @@ span.green {
 	color: #ff5912;
 }
 
-.add_to_cart a {
+.add_to_cart_sales {
 	display: none;
 	font-size: 1.6rem;
 	color: #ff723c;
 	text-align: center;
 	text-decoration: none;
+	cursor: pointer;
 }
 
-.add_to_cart p {
+.add_to_cart_sales p {
 	display: inline-block;
 }
 
@@ -543,7 +573,7 @@ span.green {
 	display: none;
 }
 
-.bestsales_product:hover .add_to_cart a {
+.bestsales_product:hover .add_to_cart_sales {
 	display: block;
 }
 
@@ -1029,6 +1059,143 @@ input[type=checkbox]:checked + label {
 	color: #ff5912;
 }
 
+/* MODAL */
+
+.empty_text {
+	font-size: 3rem;
+	text-align: center;
+}
+
+.modal-title {
+	font-size: 2rem;
+}
+
+.modal_close {
+	font-size: 1.6rem;
+	background: #edf0f2;
+	padding: 1rem 2rem;
+	position: absolute;
+	left: 10px;
+}
+
+.modal_submit {
+	font-size: 1.6rem;
+	background: #ff5912;
+	padding: 1rem 2rem;
+	color: #fff;
+}
+
+.modal_clear {
+	font-size: 1.6rem;
+	background: #cd0000;
+	color: #fff;
+	padding: 1rem 2rem;
+	position: absolute;
+	left: 20%;
+}
+
+.modal_clear:hover {
+	opacity: 0.9;
+}
+
+.modal_submit:hover {
+	opacity: 0.9;
+}
+
+.modal_close:hover {
+	opacity: 0.8;
+}
+
+.basket_product {
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+	padding: 2rem;
+	margin-bottom: 3rem;
+	border: 1px solid #ece8e8;
+	background: #f4f6f8;
+}
+
+.modal_product_close {
+	font-size: 2rem;
+	position: absolute;
+	top: 0;
+	right: 10px;
+	cursor: pointer;
+}
+
+.basket_img img {
+	width: 90px;
+	height: 120px;
+	margin-right: 3rem;
+}
+
+.basket_price {
+	font-weight: 700;
+	color: #ff5912;
+}
+
+.basket_text {
+	font-size: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+#basket_modal {
+	padding: 0;
+}
+
+/* MODAL CONFIRM */
+
+.site-dialog {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 95%;
+	max-width: 500px;
+	border-radius: 5px;
+	box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .3);
+}
+
+.site-dialog h1 {
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0;
+    color: #fff;
+  }
+
+.site-dialog p {
+    font-size: 18px;
+  }
+.dialog-header {
+    padding: 12px 20px;
+    background-color: #34404b;
+  }
+.dialog-content {
+    padding: 30px 20px;
+    background-color: #fff;
+}
+
+.btn-group {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 1rem 0;
+	background: #34404b;
+}
+
+.btn-cancel, .btn-danger {
+	padding: 1rem 1.5rem;
+	font-size: 16px;
+}
+
+.btn-cancel:hover {
+	opacity: 0.9;
+}
+
 @media screen and (max-width: 1250px) {
 
 	html {
@@ -1390,5 +1557,9 @@ input[type=checkbox]:checked + label {
 
 	.product_detail_info {
 		text-align: center;
+	}
+
+	.modal_clear {
+		left: 30%;
 	}
 }
