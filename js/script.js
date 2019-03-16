@@ -57,6 +57,7 @@ $(document).ready(function(){
   		$(this).toggleClass('size_btn_active');
   	});
 
+<<<<<<< HEAD
   	$(".product_info_image_click").click(function(){	// Событие клика на маленькое изображение
 	  	var img = $(this);	// Получаем изображение, на которое кликнули
 		var src = img.attr('src'); // Достаем из этого изображения путь до картинки
@@ -115,3 +116,6 @@ $(document).ready(function(){
 
 });
 
+=======
+});
+>>>>>>> parent of 4f35abb... Настроил увеличение изображение
